@@ -17,8 +17,8 @@ public class Menu : MonoBehaviour
 	bool                           startFill,startFill1,startFill2,toGunSelector,startGame;
 	[SerializeField] float         fillSpeed;
 	[SerializeField] Image         AudioSpr;
-	[SerializeField] Sprite        AudioOn,   AudioOff;
-	[SerializeField] Text          moneyText, boomText;
+	[SerializeField] Sprite        AudioOn,  AudioOff;
+	[SerializeField] Text          moneyText,boomText;
 	[SerializeField] Text          moneyText1,boomText1;
 	public           GameObject    PopUpRewardVideo;
 
@@ -84,9 +84,6 @@ public class Menu : MonoBehaviour
 				{
 					Audio.Instance.SoundEffect(11);
 				}
-
-				FirebaseInit.Instance.Log("PLayGame","Time",1);
-
 				break;
 			case 1:
 //			mainMenu.SetActive (false);
@@ -251,9 +248,9 @@ public class Menu : MonoBehaviour
 	public void SetText()
 	{
 //		PlayerPrefs.SetInt ("money", 999);
-		moneyText.text =PlayerPrefs.GetInt("money").ToString();
+		moneyText.text=PlayerPrefs.GetInt("money").ToString();
 		moneyText1.text=PlayerPrefs.GetInt("money").ToString();
 		boomText1.text =PlayerPrefs.GetInt("boom").ToString();
-		boomText.text  =PlayerPrefs.GetInt("boom").ToString();
+		boomText.text =PlayerPrefs.GetInt("boom").ToString();
 	}
 }
