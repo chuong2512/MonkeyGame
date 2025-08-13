@@ -126,8 +126,8 @@ public class Menu : MonoBehaviour
 	}
 	private void SetAnchor()
 	{
-		leftSide.anchoredPosition =new Vector2(200,0);
-		rightSide.anchoredPosition=new Vector2(-200,0);
+		leftSide.anchoredPosition =new Vector2(500,0);
+		rightSide.anchoredPosition=new Vector2(-500,0);
 	}
 	private void StartFill1() { startFill1=true; }
 
@@ -148,7 +148,7 @@ public class Menu : MonoBehaviour
 		if(startFill)
 		{
 			leftSide.anchoredPosition=new Vector2(leftSide.anchoredPosition.x+fillSpeed,0);
-			if(leftSide.anchoredPosition.x==200f)
+			if(leftSide.anchoredPosition.x==500f)
 			{
 				startFill=false;
 				startGame=true;
@@ -159,7 +159,7 @@ public class Menu : MonoBehaviour
 		if(startFill1)
 		{
 			leftSide.anchoredPosition=new Vector2(leftSide.anchoredPosition.x-fillSpeed,0);
-			if(leftSide.anchoredPosition.x==-500)
+			if(leftSide.anchoredPosition.x==-800)
 			{
 				startFill1=false;
 			}
@@ -169,7 +169,7 @@ public class Menu : MonoBehaviour
 		if(startFill2)
 		{
 			leftSide.anchoredPosition=new Vector2(leftSide.anchoredPosition.x+fillSpeed,0);
-			if(leftSide.anchoredPosition.x==200f)
+			if(leftSide.anchoredPosition.x==500f)
 			{
 				startFill2=false;
 				Invoke("StartFill1",0.25f);

@@ -69,9 +69,9 @@ public class GameManager : MonoBehaviour {
 	private	void Awake ()
 	{
 		Instance = this;
-		genPos [0] = new Vector3 (Camera.main.ScreenToWorldPoint (new Vector3( 0, Screen.height, 0)).x + 1, Camera.main.ScreenToWorldPoint (new Vector3 (0, Screen.height, 0)).y, 0);
+		genPos [0] = new Vector3 (Camera.main.ScreenToWorldPoint (new Vector3( Screen.width* 1/ 4f, Screen.height, 0)).x + 1, Camera.main.ScreenToWorldPoint (new Vector3 (0, Screen.height, 0)).y, 0);
 		genPos [1] = new Vector3 (Camera.main.ScreenToWorldPoint (new Vector3( Screen.width/2f, Screen.height, 0)).x, Camera.main.ScreenToWorldPoint (new Vector3 (0, Screen.height, 0)).y, 0);
-		genPos [2] = new Vector3 (Camera.main.ScreenToWorldPoint (new Vector3( Screen.width, Screen.height, 0)).x - 1, Camera.main.ScreenToWorldPoint (new Vector3 (0, Screen.height, 0)).y, 0);
+		genPos [2] = new Vector3 (Camera.main.ScreenToWorldPoint (new Vector3( Screen.width * 3 / 4f, Screen.height, 0)).x - 1, Camera.main.ScreenToWorldPoint (new Vector3 (0, Screen.height, 0)).y, 0);
 	}
 
 	void Start ()
